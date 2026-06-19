@@ -107,6 +107,26 @@ form button{
     font-size: 18px;
     color: #2E2E2F;
 }
+.empty-saved{
+    text-align: center;
+}
+.empty-saved h2{
+    font-family: 'Inter',sans-serif;
+    margin-top: 212px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #787878;
+}
+
+.empty-saved a{
+    font-family: 'Inter',sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    color: #FFFFFF;
+    display: inline-block;
+    margin-top: 15px;
+}
 
 @media (max-width: 600px){
     .heading{
