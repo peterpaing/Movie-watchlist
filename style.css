@@ -50,3 +50,43 @@ li a{
     text-decoration: none;
     text-shadow: 0.5px 0.5px#121212;
 }
+form{
+    position: relative;
+    position: absolute;
+    top: 170px;
+    left: 360px;
+}
+
+.fa-solid{
+    position: absolute;
+    top: 9px;
+    left: 15px;
+    width: 16px;
+    color: #A5A5A5;
+}
+input{
+    font-family: 'Inter',sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #A5A5A5;
+    padding: 9px 150px 9px 41px;
+    background-color: #2E2E2F;
+    outline: none;
+    border: none;
+    margin: 0;
+    border-radius: 6px 0 0 6px;
+}
+
+form button{
+    font-family: 'Inter',sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color:#FFFFFF;
+    background-color: #4B4B4B;
+    padding: 9px 39px 9px 34px;
+    margin: 0;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    position: absolute;
+
+}
