@@ -166,4 +166,11 @@ form button{
         top:350px;
         left: 150px;
 }
+    .empty-saved h2{
+        margin-top: 160px;
+}
+
+    .empty-saved a{
+        font-size: 16px;
+}
 }
