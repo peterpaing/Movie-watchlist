@@ -1,38 +1,35 @@
 document.querySelector("form").addEventListener("submit", (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
-    const inputEl = document.getElementById('search-input').value;
+    const inputEl = document.getElementById('search-input').value
 
     fetch(`https://www.omdbapi.com/?s=${encodeURIComponent(inputEl)}&apikey=f0eeb5ed`)
         .then(res => res.json())
         .then(data => {
-            console.log(data);
 
             if (data.Response === "False") {
                 document.getElementById('movie-list').innerHTML =
-                    `<p>No results found</p>`
+                    `<p>Unable to find what you’re looking for. Please try another search.</p>`
                 return
             }
 
-            const movieList = data.Search.map(movie => {
-                return `
-                    <div class="movie">
-                        <img src="${movie.Poster}" alt="${movie.Title}">
-                        <div class="movie-details">
-                            <h3>${movie.Title}</h3>
-                            <div class="about-movie">
-                                <p>${movie.Year}</p>
-                                <i class="fa-solid fa-circle-plus"></i>
-                                <p>Watchlist</p>
+            data.Search.forEach(id => {
+                fetch(`https://www.omdbapi.com/?i=${id.imdbID}&apikey=f0eeb5ed`)
+                    .then(res => res.json())
+                    .then(fullMovie  => {
+                        const movieHTML = `
+                            <div class="movie">
+                                <img src="${fullMovie.Poster !== "N/A" ? fullMovie.Poster : ""}" alt="${fullMovie.Title}">
+                                <h3>${fullMovie.Title}</h3>
+                                <p>${fullMovie.imdbRating}</p>
+                                <p>${fullMovie.Runtime}</p>
+                                <p>${fullMovie.Plot}</p>
                             </div>
-                        </div>
-                    </div>
-                `
-            }).join('')
-
-            document.getElementById('movie-list').innerHTML = movieList
+                        `
+                    document.getElementById('movie-list').innerHTML += movieHTML
+                    })
+            })
         })
-        .catch(err => {
-            console.error(err)
-        })
+        .catch(err => console.error(err))
 })
+
