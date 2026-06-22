@@ -54,15 +54,15 @@ li a{
 }
 form{
     position: relative;
-    position: absolute;
-    top: 170px;
-    left: 360px;
+    margin-top: -30px;
+    padding-left: 35px;
+    
 }
 
 .fa-magnifying-glass{
     position: absolute;
     top: 9px;
-    left: 15px;
+    left: 40px;
     width: 16px;
     color: #A5A5A5;
 }
@@ -217,17 +217,8 @@ form button{
     ul li{
         margin-top: 5px;
     }
-    .fa-magnifying-glass {
-    position: absolute;
-    top: 8px;
-    left: 12px;
-    font-size: 15px;
-    color: #A5A5A5;
-}
-    form{
-        left: 47px;
     
-}
+   
     input {
         font-size: 16px;
         padding: 8px 20px 8px 34px;
@@ -307,3 +298,4 @@ form button{
     display: none;
 }
 }
+
