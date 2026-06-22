@@ -18,7 +18,7 @@ document.querySelector("form").addEventListener("submit", (e) => {
                     .then(res => res.json())
                     .then(fullMovie  => {
                         const movieHTML = `
-                            <section class="movie">
+                            <section class="movie-section">
                                 <img src="${fullMovie.Poster !== "N/A" ? fullMovie.Poster : ""}" alt="${fullMovie.Title}">
                                 <div class="movie-container">
                                 <div class="movie-title">
@@ -33,9 +33,10 @@ document.querySelector("form").addEventListener("submit", (e) => {
                                 <p>Watchlist</p>
                                 </div>
                                 <p>${fullMovie.Plot}</p>
-                                <div class="movie-container">
+                                </div>
                             </section>
                         `
+                    document.querySelector('.moive').style.display ='none'
                     document.getElementById('movie-list').innerHTML += movieHTML
                     })
             })
