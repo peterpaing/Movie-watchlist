@@ -201,10 +201,11 @@ form button{
 }
 
 @media (max-width: 600px){
-    body{
-        width: 100vw;
-    }
-    .heading{
+    html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}
+     .heading{
         width: 100vw;
     }
     .heading h1{
@@ -250,5 +251,56 @@ form button{
 
     .empty-saved a{
         font-size: 16px;
+}
+
+    .movie-section{
+    gap:21px;
+    margin:0 ;
+    width: 100%;
+}
+    
+   .movie-title{
+    width: 250px;
+    align-items: self-start;
+    margin-bottom: 11px;
+}
+   
+
+  .movie-title h3{
+    font-size: 16px;
+   }
+
+   .movie-title .fa-star{
+    margin-left:5px;
+    margin-right: 0;
+}
+   .about-movie{
+    flex-direction: column;
+    justify-content: flex-start;
+}
+    .mobile-about{
+    display: flex;
+    width: 100%;
+    }
+
+    .mobile-watchlist{
+    display: flex;
+    text-align: left;
+    align-items: center;
+    width: 100%;
+    }
+
+    .mobile-watchlist .fa-circle-plus,.mobile-watchlist  p{
+    margin-top: 15px;
+    }
+
+   .about-movie .fa-circle-plus{
+    font-size: 25px;
+    margin-right: 3px;
+    margin-left: -5px;
+}
+
+   .movie-section .movie-plot{
+    display: none;
 }
 }

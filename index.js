@@ -27,10 +27,14 @@ document.querySelector("form").addEventListener("submit", (e) => {
                                 <p>${fullMovie.imdbRating}</p>
                                 </div>
                                 <div class="about-movie">
+                                <div class="mobile-about">
                                 <p>${fullMovie.Runtime}</p>
                                 <p>${fullMovie.Genre}</p>
+                                </div>
+                                <div class="mobile-watchlist">
                                 <i class="fa-solid fa-circle-plus"></i>
                                 <p>Watchlist</p>
+                                </div>
                                 </div>
                                 <p class="movie-plot">${fullMovie.Plot}</p>
                                 </div>
