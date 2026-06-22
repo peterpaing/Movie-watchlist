@@ -26,6 +26,7 @@ body{
     display: flex;
     justify-content: space-between;
     padding:82px  46px  78px 42px;
+    margin-bottom: 17px;
 }
 
 .heading h1{
@@ -131,13 +132,20 @@ form button{
 
 .movie-section{
     display: flex;
+    align-items: center;
     gap:21px;
+    margin: 0 41px;
+    width: 550px;
+    border-bottom: 1.5px solid #2C2C2C;
 }
 
 .movie-section img{
     width: 99px;
     height: 147px;
     border-radius: 2.33px;
+    display: inline-block;
+    margin-top: 25px;
+    margin-bottom: 21px;
 }
 
 .movie-title{
@@ -181,6 +189,15 @@ form button{
 .about-movie .fa-circle-plus{
     margin-left: 20px;
     margin-right: 3px;
+}
+
+.movie-section .movie-plot{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    display: block;
+    width: 100%;
+    
 }
 
 @media (max-width: 600px){

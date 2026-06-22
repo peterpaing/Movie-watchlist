@@ -32,7 +32,7 @@ document.querySelector("form").addEventListener("submit", (e) => {
                                 <i class="fa-solid fa-circle-plus"></i>
                                 <p>Watchlist</p>
                                 </div>
-                                <p>${fullMovie.Plot}</p>
+                                <p class="movie-plot">${fullMovie.Plot}</p>
                                 </div>
                             </section>
                         `
