@@ -63,7 +63,7 @@ form{
     position: absolute;
     top: 9px;
     left: 40px;
-    width: 16px;
+    font-size: 16px;
     color: #A5A5A5;
 }
 input{
@@ -114,7 +114,6 @@ form button{
 }
 .empty-saved h2{
     font-family: 'Inter',sans-serif;
-    margin-top: 212px;
     font-weight: 700;
     font-size: 18px;
     color: #787878;
@@ -176,7 +175,12 @@ form button{
     align-items: center;
     margin-bottom: 8px;
 }
-
+.mobile-about{
+    display: flex;
+}
+.mobile-watchlist{
+    display: flex;
+}
 .about-movie p{
     font-weight: 400;
     font-size: 14px;
@@ -220,9 +224,7 @@ form button{
     
    form{
     position: relative;
-    
-    padding-left: 38px;
-    
+     padding-left: 38px;
 }
 
     .fa-magnifying-glass{
@@ -307,4 +309,7 @@ form button{
     display: none;
 }
 }
+
+
+
 
