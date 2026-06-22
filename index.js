@@ -18,13 +18,23 @@ document.querySelector("form").addEventListener("submit", (e) => {
                     .then(res => res.json())
                     .then(fullMovie  => {
                         const movieHTML = `
-                            <div class="movie">
+                            <section class="movie">
                                 <img src="${fullMovie.Poster !== "N/A" ? fullMovie.Poster : ""}" alt="${fullMovie.Title}">
+                                <div class="movie-container">
+                                <div class="movie-title">
                                 <h3>${fullMovie.Title}</h3>
+                                <i class="fa-solid fa-star"></i>
                                 <p>${fullMovie.imdbRating}</p>
+                                </div>
+                                <div class="about-movie">
                                 <p>${fullMovie.Runtime}</p>
+                                <p>${fullMovie.Genre}</p>
+                                <i class="fa-solid fa-circle-plus"></i>
+                                <p>Watchlist</p>
+                                </div>
                                 <p>${fullMovie.Plot}</p>
-                            </div>
+                                <div class="movie-container">
+                            </section>
                         `
                     document.getElementById('movie-list').innerHTML += movieHTML
                     })
