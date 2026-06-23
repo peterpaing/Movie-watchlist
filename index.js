@@ -72,8 +72,6 @@ document.querySelector("form").addEventListener("submit", async (e) => {
 })
 
 
-
-
 document.addEventListener('click',function(e){
     if(e.target.dataset.add){
        watchList(e.target.dataset.add) 
