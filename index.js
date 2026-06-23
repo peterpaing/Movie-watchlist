@@ -1,10 +1,13 @@
+let fullMovies = []
+const addedMovies = []
+
 document.querySelector("form").addEventListener("submit", async (e) => {
     e.preventDefault()
 
     const inputEl = document.getElementById('search-input').value
     const movieList = document.getElementById('movie-list')
-
-    try {
+    
+     try {
         
         const searchResponse = await fetch(`https://www.omdbapi.com/?s=${encodeURIComponent(inputEl)}&apikey=f0eeb5ed`)
         const data = await searchResponse.json()
@@ -21,16 +24,14 @@ document.querySelector("form").addEventListener("submit", async (e) => {
             moviePlaceholder.style.display = 'none'
         }
 
-        movieList.innerHTML = 'Loading...'
-
-        
-        const detailedMovieRequests = data.Search.map(async (movie) => {
+       const detailedMovieRequests = data.Search.map(async (movie) => {
             const res = await fetch(`https://www.omdbapi.com/?i=${movie.imdbID}&apikey=f0eeb5ed`)
             return res.json()
         })
 
         
-        const fullMovies = await Promise.all(detailedMovieRequests)
+
+        fullMovies = await Promise.all(detailedMovieRequests)
 
         
         let moviesHTML = ''
@@ -50,7 +51,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
                                 <p>${fullMovie.Genre}</p>
                             </div>
                             <div class="mobile-watchlist">
-                                <i class="fa-solid fa-circle-plus"></i>
+                                <i class="fa-solid fa-circle-plus" data-add="${fullMovie.imdbID}"></i>
                                 <p>Watchlist</p>
                             </div>
                         </div>
@@ -69,3 +70,23 @@ document.querySelector("form").addEventListener("submit", async (e) => {
         movieList.innerHTML = `<p>Something went wrong with the network. Please try again.</p>`
     }
 })
+
+
+
+
+document.addEventListener('click',function(e){
+    if(e.target.dataset.add){
+       watchList(e.target.dataset.add) 
+    }
+})
+
+
+function watchList(added){
+    const addedWatch = fullMovies.find(movie => movie.imdbID === added)
+    addedMovies.unshift(addedWatch)
+    localStorage.setItem('watchlist', JSON.stringify(addedMovies))
+}
+
+
+
+   
