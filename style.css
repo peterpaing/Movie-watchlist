@@ -204,6 +204,14 @@ form button{
     
 }
 
+.fa-circle-minus{
+    margin-left:20px;
+    margin-right: 3px;
+}
+#saved{
+    position: absolute;
+    top:180px;
+}
 @media (max-width: 600px){
     html::-webkit-scrollbar,
     body::-webkit-scrollbar {
@@ -257,6 +265,7 @@ form button{
     .empty-saved a{
         font-size: 16px;
 }
+ 
 
     .movie-section{
     gap:21px;
@@ -307,6 +316,13 @@ form button{
 
    .movie-section .movie-plot{
     display: none;
+}
+
+   
+.fa-circle-minus{
+    margin-left:0px;
+    margin-top: 15px;
+    margin-right: 5px;
 }
 }
 
