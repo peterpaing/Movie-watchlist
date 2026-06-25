@@ -16,6 +16,11 @@
     --color-minus: #dc2626;
 }
 
+ html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+        display: none;
+    } 
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -253,10 +258,7 @@ form button{
 }
 
 @media (max-width: 600px){
-    html::-webkit-scrollbar,
-    body::-webkit-scrollbar {
-        display: none;
-    }   
+      
     body{
         justify-items: flex-start; 
     }
