@@ -14,7 +14,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
 
         
         if (data.Response === "False") {
-            movieList.innerHTML = `<p>Unable to find what you’re looking for. Please try another search.</p>`
+            movieList.innerHTML = `<p class="unable">Unable to find what you’re looking for. Please try another search.</p>`
             return
         }
 
