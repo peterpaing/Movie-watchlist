@@ -38,7 +38,7 @@ document.addEventListener('click',function(e){
 })
 
 function removeMovie(index) {
-    storedMovies.splice(index, 1);
+    storedMovies.splice(index, 1)
     localStorage.setItem('watchlist', JSON.stringify(storedMovies))
     location.reload()
 }

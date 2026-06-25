@@ -52,6 +52,11 @@ li a{
     text-decoration: none;
     text-shadow: 0.5px 0.5px#121212;
 }
+
+a:hover{
+    color :#FEC654;
+    text-decoration: underline;
+}
 form{
     position: relative;
     margin-top: -30px;
@@ -195,6 +200,10 @@ form button{
     margin-right: 3px;
 }
 
+.fa-circle-plus:hover{
+    color:#58F358;
+}
+
 .movie-section .movie-plot{
     font-weight: 400;
     font-size: 14px;
@@ -207,6 +216,10 @@ form button{
 .fa-circle-minus{
     margin-left:20px;
     margin-right: 3px;
+}
+
+.fa-circle-minus:hover{
+    color: #dc2626;
 }
 #saved{
     position: absolute;
@@ -323,6 +336,7 @@ form button{
     margin-left:0px;
     margin-top: 15px;
     margin-right: 5px;
+    font-size: 25px;
 }
 }
 
