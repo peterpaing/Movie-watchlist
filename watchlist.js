@@ -32,9 +32,11 @@ storedMovies.forEach((movie,index) => {
 savedEl.innerHTML = savedMovies
 
 document.addEventListener('click',function(e){
+
     if(e.target.dataset.remove !== undefined){
         removeMovie(e.target.dataset.remove)
     }
+    
 })
 
 function removeMovie(index) {

@@ -18,7 +18,6 @@ document.querySelector("form").addEventListener("submit", async (e) => {
             return
         }
 
-        
         const moviePlaceholder = document.querySelector('.movie')
         if (moviePlaceholder) {
             moviePlaceholder.style.display = 'none'
@@ -29,11 +28,8 @@ document.querySelector("form").addEventListener("submit", async (e) => {
             return res.json()
         })
 
-        
+         fullMovies = await Promise.all(detailedMovieRequests)
 
-        fullMovies = await Promise.all(detailedMovieRequests)
-
-        
         let moviesHTML = ''
         fullMovies.forEach(fullMovie => {
             moviesHTML += `
