@@ -9,7 +9,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
     
      try {
         
-        const searchResponse = await fetch(`https://www.omdbapi.com/?s=${encodeURIComponent(inputEl)}&apikey=f0eeb5ed`)
+        const searchResponse = await fetch(`https://www.omdbapi.com/?s=${encodeURIComponent(inputEl.trim(''))}&apikey=f0eeb5ed`)
         const data = await searchResponse.json()
 
         
